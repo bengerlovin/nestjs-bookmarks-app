@@ -17,7 +17,5 @@ import { ConfigModule } from '@nestjs/config';
       isGlobal: true,
     }),
   ],
-  controllers: [AuthController],
-  providers: [AuthService],
 })
 export class AppModule {}
