@@ -8,8 +8,9 @@
   "scripts": {
     "db:dev:rem": "docker compose rm dev-db -s -f -v",
     "prisma:dev:deploy": "npx prisma migrate deploy",
+    "prisma:dev:studio": "npx prisma studio",
     "db:dev:up": "docker compose up dev-db -d",
-    "db:dev:restart": "npm run db:dev:rem && npm run db:dev:up && npm run prisma:dev:deploy",
+    "db:dev:restart": "npm run db:dev:rem && npm run db:dev:up && npm run prisma:dev:deploy && npm run prisma:dev:studio",
     "prebuild": "rimraf dist",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
