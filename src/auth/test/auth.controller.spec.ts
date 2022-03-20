@@ -25,9 +25,15 @@ describe('Auth Controller', () => {
   describe('Sign up user', () => {
     describe('When signup() is invoked it should:', () => {
       let accessToken: TokenResponse;
+      let authDto: AuthDto;
+
+      authDto = {
+        email: AuthStub().email,
+        password: AuthStub().password,
+      };
 
       beforeEach(async () => {
-        accessToken = await authService.signup(AuthStub());
+        accessToken = await authService.signup(authDto);
       });
 
       test('call AuthService', () => {
@@ -35,7 +41,10 @@ describe('Auth Controller', () => {
       });
 
       test('called AuthService with an email and password', () => {
-        expect(authService.signup).toHaveBeenCalledWith(AuthStub());
+        expect(authService.signup).toHaveBeenCalledWith(
+          authDto.email,
+          authDto.password,
+        );
       });
 
       test('return an accesstoken object', () => {
