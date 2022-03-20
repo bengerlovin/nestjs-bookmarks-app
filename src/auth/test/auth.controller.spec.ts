@@ -27,6 +27,28 @@ describe('Auth Controller', () => {
       let accessToken: TokenResponse;
 
       beforeEach(async () => {
+        accessToken = await authService.signup(AuthStub());
+      });
+
+      test('call AuthService', () => {
+        expect(authService.signup).toHaveBeenCalled();
+      });
+
+      test('called AuthService with an email and password', () => {
+        expect(authService.signup).toHaveBeenCalledWith(AuthStub());
+      });
+
+      test('return an accesstoken object', () => {
+        expect(accessToken).toEqual(AuthTokenStub());
+      });
+    });
+  });
+
+  describe('Sign in a user', () => {
+    describe('When signin() is invoked it should:', () => {
+      let accessToken: TokenResponse;
+
+      beforeEach(async () => {
         accessToken = await authService.signin(AuthStub());
       });
 
@@ -34,7 +56,11 @@ describe('Auth Controller', () => {
         expect(authService.signin).toHaveBeenCalled();
       });
 
-      test('return an accesstoken', () => {
+      test('called AuthService with an email and password', () => {
+        expect(authService.signin).toHaveBeenCalledWith(AuthStub());
+      });
+
+      test('return an accesstoken object', () => {
         expect(accessToken).toEqual(AuthTokenStub());
       });
     });
