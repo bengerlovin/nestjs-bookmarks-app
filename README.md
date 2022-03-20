@@ -11,7 +11,7 @@ Starter app to learn the basics of NestJS.
 
 ## Prerequisites
 
-The database is hosted a/nd containerized locally via Docker, so you'll need to have [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed on your machine. Apart from that, make sure you also have the Nest CLI installed globally - info [here](https://docs.nestjs.com/cli/overview).
+The database is hosted and containerized locally via Docker, so you'll need to have [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed on your machine. Apart from that, make sure you also have the Nest CLI installed globally - info [here](https://docs.nestjs.com/cli/overview).
 
 Otherwise, just do the install & build steps below and you'll be good to go!
 
