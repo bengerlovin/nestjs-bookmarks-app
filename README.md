@@ -4,10 +4,10 @@ Starter app to learn the basics of NestJS.
 
 ## Technologies Overview
 
-- Prisma - database connection tool and ORM
-- NestJS - backend framework
-- Swagger - API documentation
-- Prettier - code formatting tool
+- **Prisma** - database connection tool and ORM
+- **NestJS** - backend framework
+- **Swagger** - API documentation
+- **Prettier** - code formatting tool
 
 ## Prerequisites
 
