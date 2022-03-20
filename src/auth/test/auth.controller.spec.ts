@@ -23,18 +23,18 @@ describe('Auth Controller', () => {
   });
 
   describe('Sign up user', () => {
-    describe('When signup() is invoked it:', () => {
+    describe('When signup() is invoked it should:', () => {
       let accessToken: TokenResponse;
 
       beforeEach(async () => {
         accessToken = await authService.signin(AuthStub());
       });
 
-      test('calls AuthService', () => {
+      test('call AuthService', () => {
         expect(authService.signin).toHaveBeenCalled();
       });
 
-      test('returns an accesstoken', () => {
+      test('return an accesstoken', () => {
         expect(accessToken).toEqual(AuthTokenStub());
       });
     });
