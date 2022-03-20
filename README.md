@@ -42,3 +42,7 @@ npm run start:dev
 I'm recommend delegating the `db:dev:restart` command to an external terminal (not your internal VS Code terminal) as it will remain open after starting up Prisma Studio.
 
 For context, the `db:dev:restart` script will handle unmounting/mounting your docker containers, as well as doing any Prisma database migrations before your Nest app starts.
+
+## API Documentation
+
+Run your Nest app (see instructions above under **Developing Locally**) then go to `localhost:5500/docs` to see the Swagger UI in action.
