@@ -6,6 +6,10 @@ import { PrismaClientKnownRequestError } from '@prisma/client/runtime';
 import { JwtService } from '@nestjs/jwt';
 import { ConfigService } from '@nestjs/config';
 
+type TokenReponse = {
+  access_token: string;
+};
+
 @Injectable()
 export class AuthService {
   constructor(
@@ -54,7 +58,7 @@ export class AuthService {
     return this.signToken(user.id, user.email);
   }
 
-  async signToken(userId: number, email: string): Promise<{ access_token: string }> {
+  async signToken(userId: number, email: string): Promise<TokenReponse> {
     const payload = {
       sub: userId,
       email,
